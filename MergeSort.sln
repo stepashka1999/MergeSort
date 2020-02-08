@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergeSort", "MergeSort\MergeSort.csproj", "{C8D44C9A-61F3-4D3E-8F3E-E6A60198B597}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergeSortForSortingData", "MergeSortForSortingData\MergeSortForSortingData.csproj", "{C5BF06BE-E4A0-4469-AC7B-9F8D8842A651}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{C8D44C9A-61F3-4D3E-8F3E-E6A60198B597}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8D44C9A-61F3-4D3E-8F3E-E6A60198B597}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8D44C9A-61F3-4D3E-8F3E-E6A60198B597}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5BF06BE-E4A0-4469-AC7B-9F8D8842A651}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5BF06BE-E4A0-4469-AC7B-9F8D8842A651}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5BF06BE-E4A0-4469-AC7B-9F8D8842A651}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5BF06BE-E4A0-4469-AC7B-9F8D8842A651}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
