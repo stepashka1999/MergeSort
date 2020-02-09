@@ -99,7 +99,7 @@ namespace MergeSort_ClassRealization
                     if(!isIgnoring)   Console.WriteLine("В одном или нескольких входных файлах данные имеют неверный тип. Проверьте данные во входных файлах. \n" +
                         "Нажмите кнопку Y, чтобы продолжить игнорируя ошибку");
 
-                    if (Console.ReadKey().Key.ToString() == "Y") isIgnoring = true;
+                    if (Console.ReadKey().Key == ConsoleKey.Y) isIgnoring = true;
                 }
             }
 
