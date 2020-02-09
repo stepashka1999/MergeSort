@@ -42,12 +42,22 @@ namespace MergeSortForSortingData
                 }
             }
 
+            //Чистим строки от символа перехода но новую строку
+            foreach (var el in TempArrayToSort)
+            {
+                for (int i = 0; i < el.Length; i++)
+                {
+                    if (el[i].ToCharArray().Last() == '\r') el[i] = el[i].Remove(el[i].Length - 1);
+                }
+            }
+
             var MergedList = Merge(TempArrayToSort, isAscending, isString);
-            WriteToFile(WritePath, MergedList);
+            WriteToFile(Path + WritePath, MergedList);
         }
         //Read From File
         static string[] ReadFormFile(string path)
         {
+            Console.WriteLine(path);
             StreamReader streamReader;
             streamReader = new StreamReader(path);
             var temRes = streamReader.ReadToEnd().Split('\n');
@@ -66,6 +76,7 @@ namespace MergeSortForSortingData
                 streamWriter.WriteLine(s);
             }
             streamWriter.Close();
+
         }
 
         static void Merge(string[] array, int lowIndex, int middleIndex, int highIndex, bool isAscending, bool isString)
@@ -92,18 +103,6 @@ namespace MergeSortForSortingData
                 index++;
             }
 
-            for (var i = left; i <= middleIndex; i++)
-            {
-                tempArray[index] = array[i];
-                index++;
-            }
-
-            for (var i = right; i <= highIndex; i++)
-            {
-                tempArray[index] = array[i];
-                index++;
-            }
-
             for (var i = 0; i < tempArray.Length; i++)
             {
                 array[lowIndex + i] = tempArray[i];
@@ -115,6 +114,13 @@ namespace MergeSortForSortingData
             while(listOfArray.Count != 1)
             {
                 var tempStr = new string[listOfArray[0].Length + listOfArray[1].Length];
+                var index = 0;
+                for(int i = 0; i < 2; i++)
+                    for(int j =0; j < listOfArray[i].Length; j++)
+                    {
+                        tempStr[index] = listOfArray[i][j];
+                        index++;
+                    }
 
                 var middleIndex = listOfArray[0].Length + 1;
 
